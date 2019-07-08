@@ -90,7 +90,7 @@ let askForOtpCode = (twoFactorState: TwoFactorState) =>
       "This operation requires a one-time password from your authenticator."
     );
 
-    let val = await askQuestion("Enter one-time password:");
+    let val = await askQuestion("npm requires a One Time Password (OTP) to continue publishing.\nPlease open your authenticator app and enter your OTP here:");
     twoFactorState.token = val;
     return val;
   });
